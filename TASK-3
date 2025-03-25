@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Colorful Calculator</title>
+  <style>
+    /* Global Styles */
+    body {
+      background: linear-gradient(135deg, #8EC5FC, #E0C3FC);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+    }
+    .calculator {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      width: 320px;
+      overflow: hidden;
+    }
+    .display {
+      background: #222;
+      color: #0f0;
+      font-size: 2rem;
+      padding: 20px;
+      text-align: right;
+    }
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: #ddd;
+    }
+    .button {
+      background: #f0f0f0;
+      border: none;
+      padding: 20px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .button:hover {
+      background: #e0e0e0;
+    }
+    /* Specific Button Styles */
+    .operator {
+      background: #ff9f1c;
+      color: #fff;
+    }
+    .operator:hover {
+      background: #ffbf69;
+    }
+    .equals {
+      background: #2ec4b6;
+      color: #fff;
+      grid-column: span 2;
+    }
+    .equals:hover {
+      background: #3fe6c9;
+    }
+    .clear {
+      background: #e71d36;
+      color: #fff;
+    }
+    .clear:hover {
+      background: #ff4b5c;
+    }
+  </style>
+</head>
+<body>
+  <div class="calculator">
+    <!-- Display Screen -->
+    <div class="display" id="display">0</div>
+    <!-- Calculator Buttons -->
+    <div class="buttons">
+      <button class="button clear" id="clear">C</button>
+      <button class="button operator" data-value="/">÷</button>
+      <button class="button operator" data-value="*">×</button>
+      <button class="button operator" data-value="-">−</button>
+      
+      <button class="button" data-value="7">7</button>
+      <button class="button" data-value="8">8</button>
+      <button class="button" data-value="9">9</button>
+      <button class="button operator" data-value="+">+</button>
+      
+      <button class="button" data-value="4">4</button>
+      <button class="button" data-value="5">5</button>
+      <button class="button" data-value="6">6</button>
+      <button class="button equals" id="equals">=</button>
+      
+      <button class="button" data-value="1">1</button>
+      <button class="button" data-value="2">2</button>
+      <button class="button" data-value="3">3</button>
+      <!-- Zero spans two columns -->
+      <button class="button" data-value="0" style="grid-column: span 2;">0</button>
+      <button class="button" data-value=".">.</button>
+    </div>
+  </div>
+
+  <script>
+    const display = document.getElementById('display');
+    const buttons = document.querySelectorAll('.button');
+    let currentInput = '';
+    
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        const value = button.getAttribute('data-value');
+        
+        // Clear display
+        if (button.id === 'clear') {
+          currentInput = '';
+          display.textContent = '0';
+          return;
+        }
+        
+        // Evaluate the expression
+        if (button.id === 'equals') {
+          try {
+            currentInput = eval(currentInput).toString();
+          } catch (error) {
+            currentInput = 'Error';
+          }
+          display.textContent = currentInput;
+          return;
+        }
+        
+        // Prevent operators as first input
+        if ('/*-+'.includes(value) && currentInput === '') {
+          return;
+        }
+        
+        // Append button value to the current input
+        currentInput += value;
+        display.textContent = currentInput;
+      });
+    });
+  </script>
+</body>
+</html>
