@@ -1,0 +1,429 @@
+1.a) HTML Program to explain Hyperlinks:
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hyperlink Example</title>
+</head>
+<body>
+    <a href="https://www.example.com" target="_blank">Visit Example</a>
+</body>
+</html>
+Explanation: The href attribute specifies the URL, and target="_blank" opens the link in a new tab.
+
+1.b) Embedding Internal and External JavaScript:
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Example</title>
+    <script src="external.js"></script> <!-- External JS -->
+    <script>
+        // Internal JavaScript
+        function greet() {
+            alert('Hello, World!');
+        }
+    </script>
+</head>
+<body>
+    <button onclick="greet()">Click Me</button>
+</body>
+</html>
+2.a) CSS Colors:
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .color1 { color: red; }
+        .color2 { color: #00FF00; }
+        .color3 { color: rgb(0,0,255); }
+    </style>
+</head>
+<body>
+    <p class="color1">This is red text.</p>
+    <p class="color2">This is green text.</p>
+    <p class="color3">This is blue text.</p>
+</body>
+</html>
+2.b) Document Object Properties & Methods:
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function changeText() {
+            document.getElementById("demo").innerHTML = "Text Changed!";
+        }
+    </script>
+</head>
+<body>
+    <p id="demo">This is a paragraph.</p>
+    <button onclick="changeText()">Change Text</button>
+</body>
+</html>
+3.a) HTML Tables Example:
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Table Example</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th>Day</th>
+            <th>Subject</th>
+        </tr>
+        <tr>
+            <td rowspan="2">Monday</td>
+            <td>Math</td>
+        </tr>
+        <tr>
+            <td>Science</td>
+        </tr>
+    </table>
+</body>
+</html>
+3.b) Switch Case Example:
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function dayOfWeek(day) {
+            switch(day) {
+                case 1: alert("Monday"); break;
+                case 2: alert("Tuesday"); break;
+                case 3: alert("Wednesday"); break;
+                case 4: alert("Thursday"); break;
+                case 5: alert("Friday"); break;
+                case 6: alert("Saturday"); break;
+                case 7: alert("Sunday"); break;
+                default: alert("Invalid day");
+            }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="dayOfWeek(3)">Check Day</button>
+</body>
+</html>
+4.a) CSS Font and Text:
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .example {
+            font-size: 20px;
+            font-weight: bold;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <p class="example">This is an example of font size, weight, and style.</p>
+</body>
+</html>
+4.b) Window Object:
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function showWindowInfo() {
+            alert("Window Height: " + window.innerHeight + "px");
+        }
+    </script>
+</head>
+<body>
+    <button onclick="showWindowInfo()">Show Window Info</button>
+</body>
+</html>
+5.a) Image Gallery with Thumbnails:
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Gallery</title>
+</head>
+<body>
+    <a href="fullsize1.jpg"><img src="thumb1.jpg" width="100" height="100"></a>
+    <a href="fullsize2.jpg"><img src="thumb2.jpg" width="100" height="100"></a>
+</body>
+</html>
+5.b) Looping Numbers:
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        // For loop
+        for (let i = 1; i <= 10; i++) {
+            console.log(i);
+        }
+        // While loop
+        let i = 1;
+        while (i <= 10) {
+            console.log(i++);
+        }
+        // Do-while loop
+        i = 1;
+        do {
+            console.log(i++);
+        } while (i <= 10);
+    </script>
+</head>
+<body>
+</body>
+</html>
+6.a) CSS Selector Forms:
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        p { color: red; } /* Simple Selector */
+        .myClass { color: blue; } /* Class Selector */
+        #myId { color: green; } /* ID Selector */
+        p::first-letter { font-size: 2em; } /* Pseudo-element */
+    </style>
+</head>
+<body>
+    <p>This is a paragraph.</p>
+    <p class="myClass">This is a blue paragraph.</p>
+    <p id="myId">This is a green paragraph.</p>
+</body>
+</html>
+6.b) Math Object Methods:
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function showMathInfo() {
+            alert("Random number: " + Math.random());
+            alert("Pi: " + Math.PI);
+        }
+    </script>
+</head>
+<body>
+    <button onclick="showMathInfo()">Show Math Info</button>
+</body>
+</html>
+7.a) Image Click Navigation:
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Profiles</title>
+</head>
+<body>
+    <a href="profile1.html"><img src="friend1.jpg" height="100" width="100"></a>
+    <a href="profile2.html"><img src="friend2.jpg" height="100" width="100"></a>
+</body>
+</html>
+7.b) Armstrong Number:
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function isArmstrong(number) {
+            let sum = 0, temp = number, remainder, digits = number.toString().length;
+            while (temp > 0) {
+                remainder = temp % 10;
+                sum += remainder ** digits;
+                temp = Math.floor(temp / 10);
+            }
+            return sum === number;
+        }
+        alert(isArmstrong(153)); // True
+    </script>
+</head>
+<body>
+</body>
+</html>
+8.a) HTML Semantic Tags:
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Semantic HTML</title>
+</head>
+<body>
+    <header>Header</header>
+    <nav>Navigation</nav>
+    <main>Main Content</main>
+    <article>Article</article>
+    <aside>Aside</aside>
+    <section>Section</section>
+    <footer>Footer</footer>
+</body>
+</html>
+8.b) String Methods Example:
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        let str = "Hello, World!";
+        alert(str.toUpperCase());
+        alert(str.substring(0, 5));
+    </script>
+</head>
+<body>
+</body>
+</html>
+9.a) CSS Box Model:
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .box {
+            width: 200px;
+            padding: 20px;
+            border: 5px solid black;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">This is a box with margin, padding, border, and content.</div>
+</body>
+</html>
+9.b) Denomination of Bank Amount:
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function denominations(amount) {
+            let denominations = [100, 50, 20, 10, 5, 2, 1];
+            for (let i = 0; i < denominations.length; i++) {
+                let count = Math.floor(amount / denominations[i]);
+                if (count > 0) {
+                    console.log(count + ' - ' + denominations[i] + 's');
+                }
+                amount = amount % denominations[i];
+            }
+        }
+        denominations(163); // Example call
+    </script>
+</head>
+<body>
+</body>
+</html>
+10.a) CSS Selectors:
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        div { color: red; }
+        .highlight { color: blue; }
+        #unique { color: green; }
+        p:hover { color: purple; }
+    </style>
+</head>
+<body>
+    <div>This is a div.</div>
+    <p class="highlight">This is a highlighted paragraph.</p>
+</body>
+</html>
+10.b) Date Object Example:
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function showDate() {
+            let date = new Date();
+            alert("Current Date and Time: " + date);
+        }
+    </script>
+</head>
+<body>
+    <button onclick="showDate()">Show Date</button>
+</body>
+</html>
+11.a) HTML Lists:
+<!DOCTYPE html>
+<html>
+<head>
+    <title>List Example</title>
+</head>
+<body>
+    <ul>
+        <li>Apple</li>
+        <li>Banana</li>
+    </ul>
+    <ol>
+        <li>First</li>
+        <li>Second</li>
+    </ol>
+</body>
+</html>
+11.b) Fibonacci Series Function:
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function fibonacci(n) {
+            let a = 0, b = 1;
+            for (let i = 0; i < n; i++) {
+                console.log(a);
+                let temp = a;
+                a = b;
+                b = temp + b;
+            }
+        }
+        fibonacci(5); // Example call
+    </script>
+</head>
+<body>
+</body>
+</html>
+12.a) HTML Time Table:
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Time Table</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th>Time</th>
+            <th>Subject</th>
+        </tr>
+        <tr>
+            <td>9:00 AM</td>
+            <td>Math</td>
+        </tr>
+    </table>
+</body>
+</html>
+12.b) Factorial Function:
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function factorial(n) {
+            let result = 1;
+            for (let i = 1; i <= n; i++) {
+                result *= i;
+            }
+            return result;
+        }
+        console.log(factorial(5)); // Example call
+    </script>
+</head>
+<body>
+</body>
+</html>
+13.a) Thumbnail Image Gallery:
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Gallery</title>
+</head>
+<body>
+    <a href="fullsize1.jpg"><img src="thumb1.jpg" width="100" height="100"></a>
+    <a href="fullsize2.jpg"><img src="thumb2.jpg" width="100" height="100"></a>
+</body>
+</html>
+13.b) Regex Example:
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        let str = "Hello123";
+        let regex = /\d+/;
+        alert(str.match(regex)); // Output: 123
+    </script>
+</head>
+<body>
+</body>
+</html>
