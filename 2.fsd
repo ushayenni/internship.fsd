@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Color Reference Demo</title>
+    <style>
+        .color-name {
+            color: red;
+        }
+
+        .hex-code {
+            color: #00ff00; /* Green */
+        }
+
+        .rgb {
+            color: rgb(0, 0, 255); /* Blue */
+        }
+
+        .rgba {
+            color: rgba(255, 165, 0, 0.7); /* Orange with transparency */
+        }
+
+        .hsl {
+            color: hsl(120, 100%, 25%); /* Dark green */
+        }
+
+        .hsla {
+            color: hsla(300, 100%, 50%, 0.5); /* Purple with transparency */
+        }
+    </style>
+</head>
+<body>
+    <h2 class="color-name">This uses a color name (red)</h2>
+    <h2 class="hex-code">This uses a hex code (#00ff00)</h2>
+    <h2 class="rgb">This uses RGB (rgb(0, 0, 255))</h2>
+    <h2 class="rgba">This uses RGBA (rgba(255, 165, 0, 0.7))</h2>
+    <h2 class="hsl">This uses HSL (hsl(120, 100%, 25%))</h2>
+    <h2 class="hsla">This uses HSLA (hsla(300, 100%, 50%, 0.5))</h2>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function changeText() {
+            document.getElementById("demo").innerHTML = "Text Changed!";
+            document.getElementById("demo").style.color ="green";
+        }
+    </script>
+</head>
+<body>
+    <p id="demo">This is a paragraph.</p>
+    <button onclick="changeText()">Change Text and  color </button>
+</body>
+</html>
+
