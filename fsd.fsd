@@ -277,27 +277,32 @@ Explanation: The href attribute specifies the URL, and target="_blank" opens the
     <div class="box">This is a box with margin, padding, border, and content.</div>
 </body>
 </html>
-9.b) Denomination of Bank Amount:
+9.b) 
 <!DOCTYPE html>
 <html>
 <head>
     <script>
         function denominations(amount) {
             let denominations = [100, 50, 20, 10, 5, 2, 1];
+            let result = '';
             for (let i = 0; i < denominations.length; i++) {
                 let count = Math.floor(amount / denominations[i]);
                 if (count > 0) {
-                    console.log(count + ' - ' + denominations[i] + 's');
+                    result += count + ' - ' + denominations[i] + 's\n';
                 }
-                amount = amount % denominations[i];
+                amount %= denominations[i];
             }
+            return result;
         }
-        denominations(163); // Example call
+
+        window.alert(denominations(163)); // Example call
     </script>
 </head>
 <body>
 </body>
 </html>
+
+
 10.a) CSS Selectors:
 <!DOCTYPE html>
 <html>
