@@ -481,20 +481,36 @@ document.writeln("Seconds: " + d.getSeconds() + "<br>"); // Fixed method name
 </html>
 12.b) Factorial Function:
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <script>
-        function factorial(n) {
-            let result = 1;
-            for (let i = 1; i <= n; i++) {
-                result *= i;
-            }
-            return result;
-        }
-        console.log(factorial(5)); // Example call
-    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input and Output Methods</title>
 </head>
 <body>
+
+    <h2>Input & Output Methods in JavaScript</h2>
+
+    <script>
+        // Taking input using prompt
+        let name = prompt("Enter your name:");
+
+        // Taking input using form elements
+        function getInputValue() {
+            let userInput = document.getElementById("userInput").value;
+            document.write("<h3>Form Input: " + userInput + "</h3>");
+        }
+
+        // Displaying output using document.write
+        document.write("<h3>Hello, " + name + "! (Displayed using document.write)</h3>");
+
+    </script>
+
+    <!-- Taking input using form -->
+    <label for="userInput">Enter something:</label>
+    <input type="text" id="userInput">
+    <button onclick="getInputValue()">Submit</button>
+
 </body>
 </html>
 13.a) Thumbnail Image Gallery:
