@@ -384,19 +384,27 @@ Explanation: The href attribute specifies the URL, and target="_blank" opens the
 
 10.b) Date Object Example:
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <script>
-        function showDate() {
-            let date = new Date();
-            alert("Current Date and Time: " + date);
-        }
-    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+d = new Date();
+document.writeln("Current Date: " + d + "<br>");
+document.writeln("Full Year: " + d.getFullYear() + "<br>");
+document.writeln("Month: " + (d.getMonth() + 1) + "<br>"); // Add 1 to match human-readable months
+document.writeln("Date: " + d.getDate() + "<br>");
+document.writeln("Day: " + d.getDay() + "<br>");
+document.writeln("Hours: " + d.getHours() + "<br>");
+document.writeln("Minutes: " + d.getMinutes() + "<br>");
+document.writeln("Milliseconds: " + d.getMilliseconds() + "<br>");
+document.writeln("Time (ms since epoch): " + d.getTime() + "<br>");
+document.writeln("Seconds: " + d.getSeconds() + "<br>"); // Fixed method name
+</script>
 </head>
-<body>
-    <button onclick="showDate()">Show Date</button>
-</body>
 </html>
+
 11.a) HTML Lists:
 <!DOCTYPE html>
 <html>
