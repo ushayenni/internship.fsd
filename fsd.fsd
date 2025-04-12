@@ -424,19 +424,37 @@ document.writeln("Seconds: " + d.getSeconds() + "<br>"); // Fixed method name
 </html>
 11.b) Fibonacci Series Function:
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Data Display</title>
     <script>
-        function fibonacci(n) {
-            let a = 0, b = 1;
-            for (let i = 0; i < n; i++) {
-                console.log(a);
-                let temp = a;
-                a = b;
-                b = temp + b;
-            }
+        // Sample object
+        let student = {
+            name: "Alice",
+            age: 22,
+            grade: "A",
+            city: "New York"
+        };
+
+        document.write("<h3>Using for-in loop:</h3>");
+        for (let key in student) {
+            document.write(`${key}: ${student[key]}<br>`);
         }
-        fibonacci(5); // Example call
+
+        // Converting object to an array for forEach and for-of
+        let entries = Object.entries(student);
+
+        document.write("<h3>Using forEach loop:</h3>");
+        entries.forEach(([key, value]) => {
+            document.write(`${key}: ${value}<br>`);
+        });
+
+        document.write("<h3>Using for-of loop:</h3>");
+        for (let [key, value] of entries) {
+            document.write(`${key}: ${value}<br>`);
+        }
     </script>
 </head>
 <body>
