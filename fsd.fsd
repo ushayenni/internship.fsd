@@ -207,21 +207,58 @@ Explanation: The href attribute specifies the URL, and target="_blank" opens the
 <body>
 </body>
 </html>
-6.a) CSS Selector Forms:
 <!DOCTYPE html>
 <html>
 <head>
+    <title>CSS Selectors Example</title>
     <style>
-        p { color: red; } /* Simple Selector */
-        .myClass { color: blue; } /* Class Selector */
-        #myId { color: green; } /* ID Selector */
-        p::first-letter { font-size: 2em; } /* Pseudo-element */
+        /* Pseudo-element selector */
+        p::first-letter {
+            font-size: 200%;
+            color: red;
+        }
+
+        p::after {
+            content: " ✅";
+            color:violet;
+        }
+
+        /* Descendant combinator selector (space) */
+        .container p {
+            background-color:yellow;
+            padding: 5px;
+        }
+
+        /* Child combinator selector (>) */
+        .container > h2 {
+            color: navy;
+        }
+
+        /* Adjacent sibling combinator selector (+) */
+        h2 + p {
+            font-style: italic;
+        }
+
+        /* General sibling combinator selector (~) */
+        h1 ~ p {
+            color: darkgreen;
+        }
     </style>
 </head>
 <body>
-    <p>This is a paragraph.</p>
-    <p class="myClass">This is a blue paragraph.</p>
-    <p id="myId">This is a green paragraph.</p>
+
+    <h1>Main Heading</h1>
+    <p>This paragraph comes after the h1, so it uses the general sibling selector.</p>
+
+    <div class="container">
+        <h2>Subheading</h2>
+        <p>This is a child paragraph inside the container.</p>
+        <p>Another paragraph inside the container.</p>
+    </div>
+
+    <h2>Another Subheading</h2>
+    <p>This paragraph immediately follows h2, so it's styled with the adjacent sibling selector.</p>
+
 </body>
 </html>
 6.b) Math Object Methods:
