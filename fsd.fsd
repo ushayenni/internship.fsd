@@ -265,17 +265,32 @@ Explanation: The href attribute specifies the URL, and target="_blank" opens the
 <!DOCTYPE html>
 <html>
 <head>
-    <script>
-        function showMathInfo() {
-            alert("Random number: " + Math.random());
-            alert("Pi: " + Math.PI);
-        }
-    </script>
+    <title>Math Object Example</title>
 </head>
 <body>
-    <button onclick="showMathInfo()">Show Math Info</button>
+
+    <h1>JavaScript Math Object Demo</h1>
+    <script>
+        // Math constants
+        document.write("<b>Math.PI:</b> " + Math.PI + "<br>");
+        document.write("<b>Math.E:</b> " + Math.E + "<br><br>");
+
+        // Math methods
+        document.write("<b>Math.round(4.6):</b> " + Math.round(4.6) + "<br>");
+        document.write("<b>Math.floor(4.9):</b> " + Math.floor(4.9) + "<br>");
+        document.write("<b>Math.ceil(4.1):</b> " + Math.ceil(4.1) + "<br>");
+        document.write("<b>Math.abs(-7):</b> " + Math.abs(-7) + "<br>");
+        document.write("<b>Math.pow(2, 3):</b> " + Math.pow(2, 3) + "<br>");
+        document.write("<b>Math.sqrt(16):</b> " + Math.sqrt(16) + "<br>");
+        document.write("<b>Math.max(10, 20, 30):</b> " + Math.max(10, 20, 30) + "<br>");
+        document.write("<b>Math.min(10, 20, 30):</b> " + Math.min(10, 20, 30) + "<br>");
+        document.write("<b>Math.random():</b> " + Math.random() + "<br>");
+        document.write("<b>Math.trunc(4.8):</b> " + Math.trunc(4.8) + "<br>");
+    </script>
+
 </body>
 </html>
+
 7.a) Image Click Navigation:
 <!DOCTYPE html>
 <html>
