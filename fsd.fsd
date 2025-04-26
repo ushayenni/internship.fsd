@@ -382,28 +382,24 @@ Explanation: The href attribute specifies the URL, and target="_blank" opens the
 </body>
 </html>
 9.b) 
-<!DOCTYPE html>
-<html>
-<head>
-    <script>
-        function denominations(amount) {
-            let denominations = [100, 50, 20, 10, 5, 2, 1];
-            let result = '';
-            for (let i = 0; i < denominations.length; i++) {
-                let count = Math.floor(amount / denominations[i]);
-                if (count > 0) {
-                    result += count + ' - ' + denominations[i] + 's\n';
-                }
-                amount %= denominations[i];
-            }
-            return result;
-        }
-
-        window.alert(denominations(163)); // Example call
-    </script>
-</head>
-<body>
-</body>
+<!DOCTYPE html> 
+<html> 
+<head> 
+  <title>Bank Denomination</title> 
+</head> 
+<body> 
+  <script> 
+    let amount = 163; 
+    let notes = [100, 50, 20, 10, 5, 2, 1]; 
+    for (let i = 0; i < notes.length; i++) { 
+      let count = Math.floor(amount / notes[i]); 
+      if (count > 0) { 
+        document.write(count + " - " + notes[i] + "s<br>"); 
+      } 
+      amount %= notes[i]; 
+    } 
+  </script> 
+</body> 
 </html>
 
 
